@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<button onclick="smily()">Click me</button>
+	<p id="mango">How are you?</p>
+<script>
+	function smily()
+	{
+		var a;
+		if(confirm('Tell me your answer'))
+		{
+			a="Iam fine";
+		}
+		else{
+			a="Iam not fine";
+		}
+		document.getElementById('mango').innerHTML=a;
+
+	}
+</script>
+</body>
+</html>
