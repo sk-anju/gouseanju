@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task</title>
+</head>
+<body>
+	Enter :<input type="number" id ="a" value="" placeholder="enter the number of lemons">
+	<button onclick="smily()">check</button>
+	<p id="task"></p>
+</body>
+<script>
+	function smily()
+	 {
+		var x=document.getElementById('a').value;
+		switch(true)
+		{
+			case x>21:document.getElementById('task').innerHTML=("There are "+(x-21)+" extra lemons");
+				break;	
+									
+			case x<21:document.getElementById('task').innerHTML=("There are  "+(21-x)+" less lemons");
+				break;	
+						
+			case x==21:  document.getElementById('task').innerHTML="Enough";
+				break;	
+						
+			default: document.getElementById('task').innerHTML="enter valid data";
+				break;	
+					
+		}
+	}
+</script>
+</html>
