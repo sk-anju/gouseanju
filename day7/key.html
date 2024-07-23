@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML DOM Events</h1>
+<h2>The keyup Event</h2>
+
+<p>A function is triggered when the user releases a key in the input field.</p>
+<p>The function transforms the input field to upper case:</p>
+
+Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+
+<script>
+function myFunction() {
+  let x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+<p>Assign an "onkeypress" event to an input element.</p>
+
+<p>Press a key inside the text field to set a red background color.</p>
+
+<input type="text" id="demo" onkeypress="myFunction()">
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.backgroundColor = "red";
+}
+</script>
+<p>Use the addEventListener() method to attach a "keydown" event to an input element.</p>
+
+<p>Press a key inside the text field to set a red background color.</p>
+
+<input type="text" id="demo">
+
+<script>
+document.getElementById("demo").addEventListener("keydown", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").style.backgroundColor = "red";
+}
+</script>
+
+</body>
+</html>
